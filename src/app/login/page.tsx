@@ -17,7 +17,7 @@ function Login() {
     return (
         <div className="flex h-screen w-screen">
             <div className="flex justify-center items-center w-full h-full">
-                <div className="flex flex-col rounded shadow-md w-full max-w-[400px] p-6 gap-4 bg-white">
+                <div className="flex flex-col rounded shadow-md w-full h-full md:h-fit max-w-[400px] p-6 gap-4 bg-white">
                     <LogoMiniature />
                     <h1 className="font-poppins text-[24px] font-bold leading-10 text-[#205266]">{t('login_screen.form.title')}</h1>
                     <h3 className="font-poppins text-[16px] font-normal leading-6 text-[#63D391]">{t('login_screen.form.subTitle')}</h3>

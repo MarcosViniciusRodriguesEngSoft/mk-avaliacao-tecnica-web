@@ -64,7 +64,7 @@ const Input: React.FC<Props> = ({
     };
 
     const inputClasses = useClassNames(
-        'px-2 py-3 w-full text-stone-400 text-sm font-normal leading-tight border-2 border-opacity-0 shadow-input rounded-lg focus:outline-none focus:border-blue-500 border-neutral-400',
+        'px-2 py-3 w-full text-stone-400 text-sm font-normal leading-tight border-2 border shadow-input rounded-lg focus:outline-none focus:border-blue-500 border-neutral-400',
         {
             'pl-[40px]': !!prefix,
             'pr-[40px]': !!suffix,

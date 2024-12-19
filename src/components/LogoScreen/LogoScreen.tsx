@@ -3,7 +3,7 @@ import logo from "@/assets/img/png/MK-solutions-logo.png";
 
 const LogoScreen = () => {
     return (
-        <div className="md:flex justify-center items-center w-full h-full bg-[#d1d5db] hidden p-8">
+        <div className="md:flex justify-center items-center w-full h-full bg-[#205266] hidden p-8">
             <Image
                 src={logo}
                 alt="logo"
