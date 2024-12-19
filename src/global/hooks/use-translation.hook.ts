@@ -1,9 +1,9 @@
-import i18n from "@/i18n";
+import i18n from "@/i18n/translator";
 import { languages } from "@/types/languages";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-export function useTranslationI18n(languages: languages) {
+export function useTranslationI18n(languages?: languages) {
     const { t } = useTranslation();
 
     useEffect(() => {
