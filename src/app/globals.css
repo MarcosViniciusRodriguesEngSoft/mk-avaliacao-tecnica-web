@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/***__ import de styles padrão__***/
+@import url('../assets/css/button.css');
+@import url('../assets/css/color.css');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

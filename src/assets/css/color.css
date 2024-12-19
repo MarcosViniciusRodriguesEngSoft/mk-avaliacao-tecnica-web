@@ -1,0 +1,93 @@
+:root {
+    /* Neutros */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gray-100: #F5F5F5;
+    --color-gray-200: #E0E0E0;
+    --color-gray-300: #BDBDBD;
+    --color-gray-400: #9E9E9E;
+    --color-gray-500: #757575;
+    --color-gray-600: #616161;
+    --color-gray-700: #424242;
+    --color-gray-800: #212121;
+    --color-gray-900: #111111;
+
+    /* Primárias */
+    --color-red: #FF0000;
+    --color-blue: #0000FF;
+    --color-green: #00FF00;
+    --color-yellow: #FFFF00;
+    --color-purple: #800080;
+    --color-orange: #FFA500;
+    --color-pink: #FFC0CB;
+    --color-teal: #008080;
+    --color-brown: #A52A2A;
+
+    /* Variações de Azul */
+    --color-blue-light: #ADD8E6;
+    --color-blue-dark: #00008B;
+    --color-navy: #001F3F;
+    --color-skyblue: #87CEEB;
+    --color-deepskyblue: #00BFFF;
+
+    /* Variações de Verde */
+    --color-green-light: #90EE90;
+    --color-green-dark: #006400;
+    --color-lime: #00FF00;
+    --color-forestgreen: #228B22;
+    --color-seagreen: #2E8B57;
+
+    /* Variações de Vermelho */
+    --color-red-light: #FF7F7F;
+    --color-red-dark: #8B0000;
+    --color-crimson: #DC143C;
+    --color-firebrick: #B22222;
+
+    /* Variações de Amarelo */
+    --color-yellow-light: #FFFFE0;
+    --color-yellow-dark: #FFD700;
+    --color-gold: #FFD700;
+    --color-lightgoldenrodyellow: #FAFAD2;
+
+    /* Variações de Roxo */
+    --color-purple-light: #E6E6FA;
+    --color-purple-dark: #4B0082;
+    --color-violet: #EE82EE;
+    --color-plum: #DDA0DD;
+
+    /* Cores de feedback */
+    --color-success: #28a745;
+    /* Verde */
+    --color-error: #dc3545;
+    /* Vermelho */
+    --color-warning: #ffc107;
+    /* Amarelo */
+    --color-info: #17a2b8;
+    /* Azul */
+    --color-secondary: #6c757d;
+    /* Cinza */
+
+    /* Cores de texto */
+    --color-primary: #63D391;
+    --color-secondary: "";
+    --color-muted: #888888;
+    --color-inverse: #FFFFFF;
+
+    /* Cores para links */
+    --color-link: #1E90FF;
+    --color-link-hover: #0056b3;
+    --color-link-active: #FF4500;
+    /* Laranja avermelhado */
+
+    /* Cores adicionais */
+    --color-salmon: #FA8072;
+    /* Salmão */
+    --color-lightblue: #ADD8E6;
+    /* Azul claro */
+    --color-darkslategray: #2F4F4F;
+    /* Cinza ardósia escuro */
+    --color-darkkhaki: #BDB76B;
+    /* Verde oliva escuro */
+    --color-mediumseagreen: #3CB371;
+    /* Verde mar médio */
+}

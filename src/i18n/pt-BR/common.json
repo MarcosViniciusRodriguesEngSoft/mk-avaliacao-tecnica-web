@@ -1,0 +1,8 @@
+{
+    "metadata": {
+        "title": "MK Solutions",
+        "description": "This is a Next.js application with i18n support."
+    },
+    "welcome": "Welcome to our website!",
+    "description": "This is a Next.js application with i18n support."
+}
