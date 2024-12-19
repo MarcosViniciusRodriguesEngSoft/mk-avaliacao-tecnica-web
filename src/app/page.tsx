@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div className="flex justify-center items-center w-screen h-screen">
-      <div className="flex flex-col justify-center items-center w-full h-full gap-4 bg-[#FFFFFF]">
+      <div className="flex flex-col justify-center items-center w-full h-full gap-4 bg-white">
         <LogoMiniature />
         <Button className="primary w-[300px] h-[50px]" href="/login">{t('home_screen.button_presentation')}</Button>
       </div>

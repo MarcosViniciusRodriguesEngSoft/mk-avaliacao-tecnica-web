@@ -80,7 +80,7 @@ const Input: React.FC<Props> = ({
             {label && (
                 <Label
                     htmlFor={name}
-                    className="text-stone-900 text-sm font-normal leading-tight"
+                    className="font-poppins text-[14px] font-normal leading-6 text-black"
                     required={required}>
                     {label}
                 </Label>
