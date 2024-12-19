@@ -1,0 +1,9 @@
+.container__label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.container__label span {
+  color: var(--color-red);
+}

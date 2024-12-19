@@ -7,5 +7,20 @@
     },
     "home_screen": {
         "button_presentation": "Access the platform"
+    },
+    "login_screen": {
+        "form": {
+            "title": "Welcome,",
+            "subTitle": "Enter your email and password to log in"
+        },
+        "label_login": {
+            "username": "Email Address",
+            "password": "Choose an access password"
+        },
+        "input_login": {
+            "username_placeholder": "example@mail.com.br",
+            "password_placeholder": "*********"
+        },
+        "button_login": "Enter"
     }
 }
