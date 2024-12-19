@@ -1,8 +1,7 @@
 {
     "metadata": {
         "title": "MK Solutions",
-        "description": "This is a Next.js application with i18n support."
+        "description": "Mk Solutions é o melhor sistema para provedores de internet com gestão de pagamentos, inadimplência, ERP, vendas internas e muito mais!"
     },
-    "welcome": "Welcome to our website!",
-    "description": "This is a Next.js application with i18n support."
+    "button_presentation": "Acessar a plataforma"
 }

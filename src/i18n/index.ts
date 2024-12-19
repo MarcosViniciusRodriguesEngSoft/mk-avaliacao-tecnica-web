@@ -1,33 +1,29 @@
 import i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
+import english from "./en-Us/common.json";
+import portugues from "./pt-BR/common.json";
 
-i18n.use(initReactI18next).init({
-    fallbackLng: 'en',
-    interpolation: {
-        escapeValue: false,
-    },
-    resources: {
-        en: {
-            translation: {
-                metadata: {
-                    title: "MK Solutions",
-                    description: "This is a Next.js application with i18n support."
-                },
-                welcome: "Welcome to our website!",
-                description: "This is a Next.js application with i18n support."
+i18n
+    .use(LanguageDetector)
+    .use(initReactI18next)
+    .init({
+        fallbackLng: 'en',
+        interpolation: {
+            escapeValue: false,
+        },
+        resources: {
+            en: {
+                translation: english
+            },
+            pt: {
+                translation: portugues
             },
         },
-        pt: {
-            translation: {
-                metadata: {
-                    title: "MK Solutions",
-                    description: "Esta é uma aplicação Next.js com suporte a i18n."
-                },
-                welcome: "Bem-vindo ao nosso site!",
-                description: "Esta é uma aplicação Next.js com suporte a i18n."
-            },
+        detection: {
+            order: ['navigator', 'cookie', 'localStorage', 'htmlTag', 'path', 'subdomain'],
+            caches: ['cookie'],
         },
-    },
-});
+    });
 
 export default i18n;

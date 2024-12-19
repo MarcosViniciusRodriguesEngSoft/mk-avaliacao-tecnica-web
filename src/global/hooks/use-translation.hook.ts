@@ -1,9 +1,15 @@
-import { useTranslation as useI18nTranslation } from 'react-i18next';
+import i18n from "@/i18n";
+import { languages } from "@/types/languages";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-export function useTranslation() {
-    const { t } = useI18nTranslation();
+export function useTranslationI18n(languages: languages) {
+    const { t } = useTranslation();
 
-    const getTranslation = (key: string) => t(key);
+    useEffect(() => {
+        i18n.changeLanguage(languages);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [i18n]);
 
-    return { getTranslation };
+    return { t };
 }
