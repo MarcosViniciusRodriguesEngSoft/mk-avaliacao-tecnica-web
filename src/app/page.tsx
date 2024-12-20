@@ -1,8 +1,8 @@
 'use client'
-import Button from "@/components/Button/Button";
-import LogoMiniature from "@/components/LogoMiniature/LogoMiniature";
-import LogoScreen from "@/components/LogoScreen/LogoScreen";
 import { useTranslationI18n } from "@/global/hooks/use-translation.hook";
+import LogoMiniature from "./components/LogoMiniature/LogoMiniature";
+import Button from "./components/Button/Button";
+import LogoScreen from "./components/LogoScreen/LogoScreen";
 
 export default function Home() {
   const { t } = useTranslationI18n();

@@ -1,16 +1,16 @@
 'use client'
-import Button from '@/components/Button/Button';
-import Input from '@/components/Fildes/Inputs/Input';
-import LogoScreen from "@/components/LogoScreen/LogoScreen";
-import Password from "@/components/Password/Password";
 import Icon from "@/global/components/Icons/Icon";
 import { useTranslationI18n } from "@/global/hooks/use-translation.hook";
 import { useState } from 'react';
+import Button from "../components/Button/Button";
+import Input from "../components/Fildes/Inputs/Input";
+import LogoMiniature from "../components/LogoMiniature/LogoMiniature";
+import LogoScreen from "../components/LogoScreen/LogoScreen";
+import Password from "../components/Password/Password";
 import { useFormSubmit } from "./hooks/use-submit-form.hook";
-import LogoMiniature from '@/components/LogoMiniature/LogoMiniature';
 
 function Login() {
-    const { onSubmit, handleSubmit, register } = useFormSubmit();
+    const { onSubmit, handleSubmit, register, errors } = useFormSubmit();
     const [visibility, setVisibility] = useState<boolean>(false);
     const { t } = useTranslationI18n();
 
@@ -32,10 +32,9 @@ function Login() {
                                     type='text'
                                     placeholder={t('login_screen.input_login.username_placeholder')}
                                     autoComplete="username"
-                                    // errors={errors.username && errors.username.message}
+                                    errors={errors.username && errors.username.message}
                                     required={true}
                                 />
-
                                 <Input
                                     prefix={<Icon name='Lock' width={24} height={24} />}
                                     suffix={<Password setVisibility={setVisibility} visibility={visibility} />}
@@ -45,7 +44,7 @@ function Login() {
                                     type={visibility ? "text" : "password"}
                                     placeholder={t('login_screen.input_login.password_placeholder')}
                                     autoComplete="password"
-                                    // errors={errors.password && errors.password.message}
+                                    errors={errors.password && errors.password.message}
                                     required={true}
                                 />
                             </div>

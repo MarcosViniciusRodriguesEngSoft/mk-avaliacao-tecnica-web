@@ -21,6 +21,12 @@
             "username_placeholder": "example@mail.com.br",
             "password_placeholder": "*********"
         },
+        "input_error": {
+            "username_required": "O endereço de e-mail é obrigatório.",
+            "username_invalid": "Endereço de e-mail inválido.",
+            "password_required": "A senha é obrigatória.",
+            "password_min_length": "A senha deve ter pelo menos 6 caracteres."
+        },
         "button_login": "Enter"
     }
 }

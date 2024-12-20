@@ -1,9 +1,4 @@
-import Addon from '@/components/FieldAddOns/Addon';
-import Prefix from '@/components/FieldAddOns/Prefix';
-import Suffix from '@/components/FieldAddOns/Suffix';
-import AllowClear from '@/components/Icons/AllowClear';
-import Label from '@/components/Label/Label';
-import ValidateField from '@/components/ValidateField/ValidateField';
+
 import useClassNames from '@/global/hooks/use-class-names.hook';
 import { InputFormatTypeAttribute } from '@/types/formatTypes';
 import {
@@ -12,6 +7,12 @@ import {
 } from 'react';
 import { FieldValues, UseFormRegister } from 'react-hook-form';
 import useCleanInput from './hooks/use-clean-input.hook';
+import Label from '../../Label/Label';
+import Addon from '../../FieldAddOns/Addon';
+import Prefix from '../../FieldAddOns/Prefix';
+import Suffix from '../../FieldAddOns/Suffix';
+import AllowClear from '../../Icons/AllowClear';
+import ValidateField from '../../ValidateField/ValidateField';
 
 interface InputHTMLCustomAttributes {
     label?: string;

@@ -1,3 +1,4 @@
+'use client'
 import Providers from '@/providers';
 import { Geist, Geist_Mono } from "next/font/google";
 import NextTopLoader from 'nextjs-toploader';
@@ -5,6 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/ReactToastify.css';
 import "./globals.css";
 import Head from './Head';
+import { useEffect, useState } from 'react';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,6 +23,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [isClient, setIsClient] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
+
   return (
     <html lang="pt-BR">
       <Head />
