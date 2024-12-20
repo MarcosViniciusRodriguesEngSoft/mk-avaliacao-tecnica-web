@@ -79,5 +79,15 @@
             "number_invalid": "The number must contain only digits."
         },
         "button": "Save"
+    },
+    "list_person_screen": {
+        "title": "Collaborator",
+        "header": {
+            "name": "Name",
+            "cpf": "CPF",
+            "email": "E-mail",
+            "mobile": "Mobile"
+        },
+        "button_create": "Registration"
     }
 }

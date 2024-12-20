@@ -8,11 +8,11 @@ import { v4 as uuidv4 } from 'uuid';
 import { useValidateField } from './use-validate-field.hooks';
 
 export function useFormSubmit() {
-    const { setIsGlobalLoading } = useGlobalContext();
+    const { setIsGlobalLoading, addPerson } = useGlobalContext();
     const notification = useNotification();
     const { push } = useRouter();
     const { schema } = useValidateField();
-    const { register, handleSubmit, formState: { errors } } = useForm({
+    const { register, handleSubmit, setValue, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     });
 
@@ -21,13 +21,13 @@ export function useFormSubmit() {
 
         const address = {
             id: uuidv4(),
-            address: data.address.address,
-            city: data.address.city,
-            neighborhood: data.address.neighborhood,
-            number: data.address.number,
-            state: data.address.state,
-            zipCode: data.address.zipCode,
-            complement: data.address.complement,
+            address: data.address,
+            city: data.city,
+            neighborhood: data.neighborhood,
+            number: data.number,
+            state: data.state,
+            zipCode: data.zipCode,
+            complement: data.complement,
         } as IAddressCleanDTO;
 
         const person = {
@@ -35,15 +35,15 @@ export function useFormSubmit() {
             name: data.name,
             cpf: data.cpf,
             email: data.email,
+            mobile: data.mobile,
             address: address
         } as IPersonDTO;
 
         try {
             await new Promise((resolve) => setTimeout(resolve, 2000));
-            console.log(data);
-            
-            setUser(person);
-            push('/home');
+
+            addPerson(person);
+            push('/list-person');
         } catch {
             notification({ description: 'Usuário não encontrado!', type: 'info', message: 'Atenção!' });
         } finally {
@@ -55,6 +55,7 @@ export function useFormSubmit() {
         register,
         handleSubmit,
         onSubmit,
+        setValue,
         errors,
     };
 }

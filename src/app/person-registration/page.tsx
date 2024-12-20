@@ -3,10 +3,24 @@ import { useTranslationI18n } from "@/global/hooks/use-translation.hook";
 import Button from "../components/Button/Button";
 import Input from "../components/Fildes/Inputs/Input";
 import { useFormSubmit } from "./hooks/use-submit-form.hook";
+import { useFindData } from "./hooks/use-find-data.hook";
+import { useEffect } from "react";
 
 function PersonRegistration() {
-    const { onSubmit, handleSubmit, register, errors } = useFormSubmit();
+    const { onSubmit, handleSubmit, register, setValue, errors } = useFormSubmit();
+    const { findAdderess, consultationAddress } = useFindData();
     const { t } = useTranslationI18n();
+
+    useEffect(() => {
+        if (consultationAddress) {
+            setValue('zipCode', consultationAddress?.cep || '');
+            setValue('city', consultationAddress?.localidade || '');
+            setValue('state', consultationAddress?.uf || '');
+            setValue('neighborhood', consultationAddress?.bairro || '');
+            setValue('address', consultationAddress?.logradouro || '');
+            setValue('complement', consultationAddress?.complemento || '');
+        }
+    }, [consultationAddress, setValue]);
 
     return (
         <div className="h-full w-screen">
@@ -66,6 +80,7 @@ function PersonRegistration() {
                                     errors={errors.zipCode && errors.zipCode.message}
                                     required={true}
                                     format="cep"
+                                    onChange={(e) => findAdderess(e.target.value)}
                                 />
                             </div>
                             <div className="flex flex-col md:flex-row gap-6">
