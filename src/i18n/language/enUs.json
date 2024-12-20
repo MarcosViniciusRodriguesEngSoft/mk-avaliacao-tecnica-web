@@ -5,7 +5,7 @@
             "description": "Mk Solutions is the best system for internet providers with payment management, default, ERP, internal sales and much more!"
         }
     },
-    "home_screen": {
+    "initial_screen": {
         "button_presentation": "Access the platform"
     },
     "login_screen": {
@@ -28,5 +28,56 @@
             "password_min_length": "A senha deve ter pelo menos 6 caracteres."
         },
         "button_login": "Enter"
+    },
+    "home_screen": {
+        "navbar": {
+            "link_person_registration": "Person Registration"
+        }
+    },
+    "person_registration": {
+        "label": {
+            "email": "Email",
+            "mobile": "Mobile",
+            "name": "Name",
+            "cpf": "CPF",
+            "zipCode": "ZIP Code",
+            "city": "City",
+            "state": "State",
+            "neighborhood": "Neighborhood",
+            "address": "Address",
+            "number": "Number",
+            "complement": "Complement"
+        },
+        "input_placeholder": {
+            "email": "example@mail.com",
+            "mobile": "(XX) XXXXX-XXXX",
+            "name": "First and Last Name",
+            "cpf": "123.456.789-10",
+            "zipcode": "Enter your ZIP code",
+            "city": "City",
+            "state": "State",
+            "neighborhood": "Neighborhood Name",
+            "address": "Street, Avenue",
+            "number": "Number",
+            "complement": "Complement"
+        },
+        "input_error": {
+            "email_required": "Email address is required.",
+            "email_invalid": "Invalid email address.",
+            "mobile_required": "Mobile number is required.",
+            "mobile_invalid": "Invalid mobile number. Use the format (XX) XXXXX-XXXX.",
+            "name_required": "Name is required.",
+            "cpf_required": "CPF is required.",
+            "cpf_invalid": "Invalid CPF. Use the format XXX.XXX.XXX-XX.",
+            "zipcode_required": "Zip code is required.",
+            "zipcode_invalid": "Invalid zip code. Use the format XXXXX-XXX.",
+            "city_required": "City is required.",
+            "state_required": "State is required.",
+            "neighborhood_required": "Neighborhood is required.",
+            "address_required": "Address is required.",
+            "number_required": "Number is required.",
+            "number_invalid": "The number must contain only digits."
+        },
+        "button": "Save"
     }
 }

@@ -1,4 +1,4 @@
-import { IUserAuthDTO } from "@/models/amigo-catalogo-api.model";
+import { IUserAuthDTO } from "@/models/mk-avaliacao-api.model";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import Cookies from "js-cookie";
 

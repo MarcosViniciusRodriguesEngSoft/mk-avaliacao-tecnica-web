@@ -10,7 +10,7 @@ const GlobalLoading: React.FunctionComponent = () => {
             visible={true}
             height="100"
             width="100"
-            color="#006400"
+            color="#205266"
             ariaLabel="three-circles-loading"
             wrapperStyle={{
                 position: 'fixed',

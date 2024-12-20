@@ -5,7 +5,7 @@
             "description": "Mk Solutions é o melhor sistema para provedores de internet com gestão de pagamentos, inadimplência, ERP, vendas internas e muito mais!"
         }
     },
-    "home_screen": {
+    "initial_screen": {
         "button_presentation": "Acessar a plataforma"
     },
     "login_screen": {
@@ -28,5 +28,56 @@
             "password_min_length": "Password must be at least 6 characters long."
         },
         "button_presentation": "Entrar"
+    },
+    "home_screen": {
+        "navbar": {
+            "link_person_registration": "Cadastro de Pessoa"
+        }
+    },
+    "person_registration": {
+        "label": {
+            "email": "E-mail",
+            "mobile": "Celular",
+            "name": "Nome",
+            "cpf": "CPF",
+            "zipCode": "Cep",
+            "city": "Cidade",
+            "state": "Estado",
+            "neighborhood": "Bairro",
+            "address": "Endereço",
+            "number": "Numero",
+            "complement": "Complemento"
+        },
+        "input_placeholder": {
+            "email": "exemplo@mail.com.br",
+            "mobile": "(XX) XXXXX-XXXX",
+            "name": "Nome e Sobrenome",
+            "cpf": "123.456.789-10",
+            "zipcode": "Digite seu CEP",
+            "city": "Cidade",
+            "state": "Estado",
+            "neighborhood": "Nome do Bairro",
+            "address": "Rua, Avenida",
+            "number": "Número",
+            "complement": "Complemento"
+        },
+        "input_error": {
+            "email_required": "O endereço de e-mail é obrigatório.",
+            "email_invalid": "Endereço de e-mail inválido.",
+            "mobile_required": "O número de celular é obrigatório.",
+            "mobile_invalid": "Número de celular inválido. Use o formato (XX) XXXXX-XXXX.",
+            "name_required": "O nome é obrigatório.",
+            "cpf_required": "O CPF é obrigatório.",
+            "cpf_invalid": "CPF inválido. Use o formato XXX.XXX.XXX-XX.",
+            "zipcode_required": "O CEP é obrigatório.",
+            "zipcode_invalid": "CEP inválido. Use o formato XXXXX-XXX.",
+            "city_required": "A cidade é obrigatória.",
+            "state_required": "O estado é obrigatório.",
+            "neighborhood_required": "O bairro é obrigatório.",
+            "address_required": "O endereço é obrigatório.",
+            "number_required": "O número é obrigatório.",
+            "number_invalid": "O número deve conter apenas dígitos."
+        },
+        "button": "Salvar"
     }
 }

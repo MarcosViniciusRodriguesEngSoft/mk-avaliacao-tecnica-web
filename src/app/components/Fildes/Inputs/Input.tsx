@@ -76,7 +76,7 @@ const Input: React.FC<Props> = ({
     );
 
     return (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col w-full gap-2">
             {label && (
                 <Label
                     htmlFor={name}

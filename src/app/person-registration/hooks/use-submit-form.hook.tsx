@@ -1,14 +1,14 @@
 import { useGlobalContext } from '@/context/GlobalContext';
+import { IAddressCleanDTO, IPersonDTO } from '@/models/mk-avaliacao-api.model';
 import { useNotification } from '@/utils/notification';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useRouter } from 'next/navigation';
 import { FieldValues, useForm } from 'react-hook-form';
-import { useValidateField } from './use-validate-field.hooks';
-import { IUserAuthDTO } from '@/models/mk-avaliacao-api.model';
 import { v4 as uuidv4 } from 'uuid';
+import { useValidateField } from './use-validate-field.hooks';
 
 export function useFormSubmit() {
-    const { setIsGlobalLoading, setUser } = useGlobalContext();
+    const { setIsGlobalLoading } = useGlobalContext();
     const notification = useNotification();
     const { push } = useRouter();
     const { schema } = useValidateField();
@@ -19,15 +19,30 @@ export function useFormSubmit() {
     const onSubmit = async (data: FieldValues) => {
         setIsGlobalLoading(true);
 
-        const body = {
+        const address = {
             id: uuidv4(),
-            username: data.username,
-            password: data.password
-        } as IUserAuthDTO
-        
+            address: data.address.address,
+            city: data.address.city,
+            neighborhood: data.address.neighborhood,
+            number: data.address.number,
+            state: data.address.state,
+            zipCode: data.address.zipCode,
+            complement: data.address.complement,
+        } as IAddressCleanDTO;
+
+        const person = {
+            id: uuidv4(),
+            name: data.name,
+            cpf: data.cpf,
+            email: data.email,
+            address: address
+        } as IPersonDTO;
+
         try {
             await new Promise((resolve) => setTimeout(resolve, 2000));
-            setUser(body);
+            console.log(data);
+            
+            setUser(person);
             push('/home');
         } catch {
             notification({ description: 'Usuário não encontrado!', type: 'info', message: 'Atenção!' });

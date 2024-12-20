@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <Head />
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased #205266`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased !overflow-y-auto`}>
         <NextTopLoader
           color="#63D391"
           initialPosition={0.08}
