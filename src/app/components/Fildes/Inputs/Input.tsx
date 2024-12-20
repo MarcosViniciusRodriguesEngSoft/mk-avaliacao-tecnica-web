@@ -13,6 +13,7 @@ import AllowClear from '../../Icons/AllowClear';
 import Label from '../../Label/Label';
 import ValidateField from '../../ValidateField/ValidateField';
 import useCleanInput from './hooks/use-clean-input.hook';
+import useFormatValue from './hooks/use-format-value.hook';
 interface InputHTMLCustomAttributes {
     label?: string;
     required?: boolean;
@@ -56,7 +57,9 @@ const Input: React.FC<Props> = ({
 
     const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
         const rawValue = event.target.value;
-        setFormattedValue(rawValue);
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        const formatted = useFormatValue({ value: rawValue, format });
+        setFormattedValue(formatted);
 
         if (onChange) {
             onChange(event);
