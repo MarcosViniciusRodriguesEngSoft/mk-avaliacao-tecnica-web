@@ -2,12 +2,12 @@
 import Icon from "@/global/components/Icons/Icon";
 import { useTranslationI18n } from "@/global/hooks/use-translation.hook";
 import { useState } from 'react';
-import Button from "../components/Button/Button";
-import Input from "../components/Fildes/Inputs/Input";
-import LogoMiniature from "../components/LogoMiniature/LogoMiniature";
-import LogoScreen from "../components/LogoScreen/LogoScreen";
-import Password from "../components/Password/Password";
 import { useFormSubmit } from "./hooks/use-submit-form.hook";
+import LogoMiniature from "../components/LogoMiniature/LogoMiniature";
+import Input from "../components/Fildes/Inputs/Input";
+import Password from "../components/Password/Password";
+import Button from "../components/Button/Button";
+import LogoScreen from "../components/LogoScreen/LogoScreen";
 
 function Login() {
     const { onSubmit, handleSubmit, register, errors } = useFormSubmit();

@@ -6,14 +6,13 @@ import {
     useState
 } from 'react';
 import { FieldValues, UseFormRegister } from 'react-hook-form';
-import useCleanInput from './hooks/use-clean-input.hook';
-import Label from '../../Label/Label';
 import Addon from '../../FieldAddOns/Addon';
 import Prefix from '../../FieldAddOns/Prefix';
 import Suffix from '../../FieldAddOns/Suffix';
 import AllowClear from '../../Icons/AllowClear';
+import Label from '../../Label/Label';
 import ValidateField from '../../ValidateField/ValidateField';
-
+import useCleanInput from './hooks/use-clean-input.hook';
 interface InputHTMLCustomAttributes {
     label?: string;
     required?: boolean;
